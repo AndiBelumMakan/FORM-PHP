@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
                 exit();    
             } else {
                 $password = md5($password);
-                $sql = "SELECT *FROM data WHERE email = '$email' AND password = '$password'";
+                $sql = "SELECT *FROM data WHERE username = '$username' AND email = '$email' AND password = '$password'";
                 $query = mysqli_query($db, $sql);
 
                 if (mysqli_num_rows($query) > 0) {
